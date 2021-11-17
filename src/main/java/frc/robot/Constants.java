@@ -13,11 +13,11 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-  // This set the ports for each drive train motor
+  // This set the ports for each drive train motor and assigns a value to both joysticks
 public static int final LEFT_FRONT_MOTOR=0 
 public static int final LEFT_BACK_MOTOR=1
 public static int final RIGHT_FRONT_MOTOR=2
 public static int final RIGHT_BACK_MOTOR=3 
-public static int final LEFT_JOYSTICK = 0
-public static int final RIGHT_JOYSTICK = 1
+public static int final LEFT_JOYSTICK=0
+public static int final RIGHT_JOYSTICK=1
 }
