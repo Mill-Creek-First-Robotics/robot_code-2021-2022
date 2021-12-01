@@ -4,20 +4,35 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 public class Drivetrain extends SubsystemBase {
+
+  private double motor_Sensitivity = 0.7f;
+  WPI_TalonSRX frontLeftMotor = null;
+  WPI_TalonSRX frontRightMotor = null;
+  WPI_TalonSRX backLeftMotor = null;
+  WPI_TalonSRX backRightMotor = null;
+
   /** Creates a new ExampleSubsystem. */
   public Drivetrain() 
   {
-    //System.out.println("Hello?");
+    frontLeftMotor = new WPI_TalonSRX(Constants.LEFT_FRONT_MOTOR);
+    frontRightMotor = new WPI_TalonSRX(Constants.RIGHT_FRONT_MOTOR);
+    backLeftMotor = new WPI_TalonSRX(Constants.LEFT_BACK_MOTOR);
+    backRightMotor = new WPI_TalonSRX(Constants.RIGHT_BACK_MOTOR);
+    //backLeftMotor = new Speed
   }
 
   @Override
   public void periodic() 
   {
     // This method will be called once per scheduler run
-    System.out.println("t");
+    //similar to the updat function in unity
   }
 
   @Override
