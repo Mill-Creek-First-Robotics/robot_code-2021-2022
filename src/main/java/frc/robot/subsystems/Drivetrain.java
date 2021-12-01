@@ -6,17 +6,23 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class ExampleSubsystem extends SubsystemBase {
+public class Drivetrain extends SubsystemBase {
   /** Creates a new ExampleSubsystem. */
-  public ExampleSubsystem() {}
-
-  @Override
-  public void periodic() {
-    // This method will be called once per scheduler run
+  public Drivetrain() 
+  {
+    //System.out.println("Hello?");
   }
 
   @Override
-  public void simulationPeriodic() {
+  public void periodic() 
+  {
+    // This method will be called once per scheduler run
+    System.out.println("t");
+  }
+
+  @Override
+  public void simulationPeriodic() 
+  {
     // This method will be called once per scheduler run during simulation
   }
 }
