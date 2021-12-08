@@ -20,13 +20,16 @@ import frc.robot.Constants;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final Drivetrain m_exampleSubsystem = new Drivetrain();
+  private final Drivetrain m_driveTrain = new Drivetrain();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     final Joystick m_JoyStickLeft = new Joystick(Constants.LEFT_JOYSTICK);
+    final Joystick m_JoyStickRight = new Joystick(Constants.RIGHT_JOYSTICK);
+
+    m_driveTrain.arcadeDrive(m_JoyStickRight.getY() * .4, m_JoyStickRight.getZ() *0.4);
     
     // Configure the button bindings
     configureButtonBindings();
